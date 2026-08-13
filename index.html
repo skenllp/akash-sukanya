@@ -189,8 +189,8 @@ p{font-size:clamp(1.02rem,1.4vw,1.18rem);font-weight:400;line-height:1.75;color:
 
 /* ================= CELEBRATION FULLSCREEN CHAPTERS ================= */
 .celeb-full{position:relative;min-height:100vh;width:100%;display:flex;align-items:flex-end;justify-content:center;overflow:hidden;background:var(--ink);}
-.celeb-poster-bg{position:absolute;inset:0;background-size:cover;background-position:center;filter:saturate(1.05);transform:scale(2.15);transform-origin:50% 97%;}
-.celeb-video-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity 1s ease;transform:scale(2.15);transform-origin:50% 97%;}
+.celeb-poster-bg{position:absolute;inset:0;background-size:cover;background-position:center;filter:saturate(1.05);transform:scale(1.35);transform-origin:50% 70%;}
+.celeb-video-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity 1s ease;transform:scale(1.35);transform-origin:50% 70%;}
 .celeb-full.video-playing .celeb-video-bg{opacity:1;}
 .celeb-overlay{position:absolute;inset:0;background:linear-gradient(180deg, rgba(15,10,6,.78) 0%, rgba(15,10,6,.22) 6%, rgba(15,10,6,.15) 22%, rgba(15,10,6,.12) 60%, rgba(15,10,6,.88) 100%);z-index:1;}
 .celeb-full-ornament{position:absolute;top:6vh;left:50%;transform:translateX(-50%);z-index:2;font-size:1.7rem;color:var(--champagne);opacity:.85;}
@@ -341,6 +341,10 @@ p{font-size:clamp(1.02rem,1.4vw,1.18rem);font-weight:400;line-height:1.75;color:
   .celeb-full-content{padding:0 7vw 7vh;}
   .celeb-expand-wrap{top:5vh;right:4vw;}
   .celeb-full-ornament{top:5vh;}
+
+  /* reset video zoom on mobile — object-fit:cover is enough */
+  .celeb-poster-bg{transform:scale(1);transform-origin:center center;}
+  .celeb-video-bg{transform:scale(1);transform-origin:center center;}
 }
 
 @media(max-width:400px){
